@@ -1,0 +1,8 @@
+vars:
+  "idc": "demo_jjh"
+  "global": "kodo_global"
+
+services:
+  "callistodemo":
+    "template": "callistodemo/v1.yaml"
+    "pipeline": "a49ac83d-3556-449e-9da7-784036e151f6"
