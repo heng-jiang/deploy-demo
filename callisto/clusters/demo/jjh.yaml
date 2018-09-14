@@ -1,6 +1,6 @@
 vars:
   "idc": "demo_jjh"
-  "global": "kodo_global"
+  "global": "demo_global"
 
 services:
   "callistodemo":
