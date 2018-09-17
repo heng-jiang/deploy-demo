@@ -1,7 +1,6 @@
 vars:
   "idc": "demo_jjh"
   "global": "demo_global"
-  "error": "error"
 
 services:
   "callistodemo":
