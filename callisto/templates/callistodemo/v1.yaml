@@ -1,2 +1,3 @@
 key1: {{.global.cpu.max}}
 key2: {{.idc.mem.max}}
+s: {{.secret.aaabccc}}
