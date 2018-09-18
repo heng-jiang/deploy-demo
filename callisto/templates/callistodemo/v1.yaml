@@ -1,25 +1,22 @@
+
 apiVersion: v1
 data:
   demo.conf: "{{.global.cpu.max}}/{{.idc.mem.max}}/{{.secret.aaabccc}}"
 kind: ConfigMap
 metadata:
-  name: demo
-  namespace: unknown
+  name: cm-wzdemo
+  namespace: spinnaker
 
 ---
 
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: demo
-  namespace: unknown
+  name: svc-wzdemo
+  namespace: spinnaker
 spec:
   replicas: 1
   template:
-    metadata:
-      labels:
-        ke-svc: demo-8905902
-        wz-mv: gitText
     spec:
       containers:
         - image: 'reg.qiniu.com/unknown/repo:latest'
@@ -41,5 +38,27 @@ spec:
             items:
               - key: demo.conf
                 path: demo.conf
-            name: demo
-          name: demo
+            name: cm-wzdemo
+          name: cm-wzdemo
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: public
+  generation: 1
+  labels:
+    ke-ingress: wzdemo-ingress
+  name: wzdemo-ingress
+  namespace: spinnaker
+spec:
+  rules:
+  - host: wzdemo.kegate-jjh.cloudappl.com
+    http:
+      paths:
+      - backend:
+          serviceName: svc-wzdemo
+          servicePort: 80
+        path: /
+status:
+  loadBalancer: {}
