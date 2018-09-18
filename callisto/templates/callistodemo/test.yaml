@@ -1,2 +1,3 @@
 demo.conf: "{{.global.cpu.max}}/{{.idc.mem.max}}/{{.secret.aaabccc}}"
 image: 'reg.qiniu.com/fun/callisto:{{.papapa.version}}'
+error: 'reg.qiniu.com/fun/callisto:{{.boom.version}}'
