@@ -19,9 +19,9 @@ spec:
   template:
     spec:
       containers:
-        - image: 'reg.qiniu.com/unknown/repo:latest'
+        - image: 'reg.qiniu.com/fun/callisto:latest'
           imagePullPolicy: Always
-          name: demo-0
+          name: wzdemo-0
           resources:
             limits:
               cpu: '1'
