@@ -48,7 +48,7 @@ spec:
         app: wzdemo
     spec:
       containers:
-        - image: 'reg.qiniu.com/fun/callisto:{{.papapa.version}}'
+        - image: 'reg.qiniu.com/fun/callisto:{{.idc.version}}'
           imagePullPolicy: Always
           name: demo-0
           resources:
