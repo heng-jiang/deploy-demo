@@ -5,4 +5,4 @@ vars:
 services:
   "callistodemo":
     "template": "callistodemo/v1.yaml"
-    "pipeline": "a49ac83d-3556-449e-9da7-784036e151f6"
+    "pipeline": "bfa45e66-e9e5-4c8f-a68d-7c55b19caa2a"
