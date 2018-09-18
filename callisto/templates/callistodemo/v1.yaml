@@ -4,7 +4,7 @@ metadata:
   labels:
     app: svc-wzdemo
   name: svc-wzdemo
-  namespace: spinnaker
+  namespace: deftones
 spec:
   ports:
   - name: wzdemo
@@ -25,7 +25,7 @@ data:
 kind: ConfigMap
 metadata:
   name: cm-wzdemo
-  namespace: spinnaker
+  namespace: deftones
 
 ---
 
@@ -35,7 +35,7 @@ metadata:
   labels:
     app: wzdemo
   name: wzdemo-server
-  namespace: spinnaker
+  namespace: deftones
 spec:
   replicas: 1
   selector:
@@ -81,10 +81,10 @@ metadata:
   labels:
     ke-ingress: wzdemo-ingress
   name: wzdemo-ingress
-  namespace: spinnaker
+  namespace: deftones
 spec:
   rules:
-  - host: wzdemo.kegate-jjh.cloudappl.com
+  - host: cdemo.kegate-jjh.cloudappl.com
     http:
       paths:
       - backend:
