@@ -1,6 +1,7 @@
 vars:
   "idc": "demo_jjh"
   "global": "demo_global"
+  "papapa": "papapa"
 
 services:
   "callistodemo":
