@@ -21,7 +21,7 @@ status:
 
 apiVersion: v1
 data:
-  demo.conf: "{{.global.cpu.max}}/{{.idc.mem.max}}/{{.secret.aaabccc}}"
+  demo.conf: "{{.global.cpu.max}}/{{.idc.mem.max}}/{{.secret.aaabccc}}/{{papapa.test}}"
 kind: ConfigMap
 metadata:
   name: cm-wzdemo
